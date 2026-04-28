@@ -1,0 +1,65 @@
+{
+  "identifier": "com.sjtu.zhiyuan-translator",
+  "version": "1.0.0",
+  "category": "translate",
+  "name": "致远一号翻译",
+  "summary": "调用 SJTU 致远一号 API 进行翻译、润色和对话。",
+  "icon": "icon.png",
+  "author": "BigYellow <wangrh1127@sjtu.edu.cn>",
+  "homepage": "",
+  "minBobVersion": "0.5.0",
+  "options": [
+    {
+      "identifier": "mode",
+      "type": "menu",
+      "title": "模式",
+      "defaultValue": "translate",
+      "menuValues": [
+        { "title": "翻译模式", "value": "translate" },
+        { "title": "文字润色", "value": "polishing" },
+        { "title": "对话模式", "value": "conversation" },
+        { "title": "自定义prompt", "value": "custom_prompt" }
+      ],
+      "desc": "模式切换：翻译、润色、对话、自定义prompt"
+    },
+    {
+      "identifier": "prompt",
+      "type": "text",
+      "defaultValue": "",
+      "title": "自定义prompt",
+      "desc": "在自定义prompt模式下，AI 将按此 prompt 回复"
+    },
+    {
+      "identifier": "api_key",
+      "type": "text",
+      "defaultValue": "",
+      "title": "API Key",
+      "desc": "在交我办APP中申请的致远一号 API 密钥",
+      "textConfig": { "type": "secure" }
+    },
+    {
+      "identifier": "model",
+      "type": "menu",
+      "title": "模型",
+      "defaultValue": "deepseek-chat",
+      "menuValues": [
+        { "title": "DeepSeek-Chat (通用推荐)", "value": "deepseek-chat" },
+        { "title": "DeepSeek-V3.2", "value": "deepseek-v3.2" },
+        { "title": "DeepSeek-Reasoner (推理)", "value": "deepseek-reasoner" },
+        { "title": "GLM-5", "value": "glm-5" },
+        { "title": "MiniMax", "value": "minimax" },
+        { "title": "MiniMax-M2.5", "value": "minimax-m2.5" },
+        { "title": "Qwen3-VL", "value": "qwen3vl" },
+        { "title": "Qwen3-Coder", "value": "qwen3coder" }
+      ],
+      "desc": "切换要使用的模型"
+    },
+    {
+      "identifier": "custom_model_name",
+      "type": "text",
+      "defaultValue": "",
+      "title": "自定义模型名",
+      "desc": "填入后优先使用此模型（覆盖菜单选择）"
+    }
+  ]
+}
